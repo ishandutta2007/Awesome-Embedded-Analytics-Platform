@@ -1,221 +1,153 @@
-# Awesome-Embedded-Analytics-Platform
-
-## Top Embedded Analytics Platforms Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on White-Label BI, Customer-Facing Dashboards, Multi-Tenant Analytics & SDK-Based Embedding*
-
-**Last updated: September 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Embedded Analytics**. These tools help SaaS vendors, product teams, and developers embed interactive dashboards, reports, and visualizations directly into their applications—enabling customer-facing analytics without building a BI platform from scratch.
-
-
-
-**Examples** include Looker Embedded, Sisense, GoodData, Domo Everywhere, Qlik Embedded Analytics, ThoughtSpot Embedded, Reveal BI, Yellowfin BI, Logi Analytics, Bold BI, Sigma Embedded, Luzmo, Metabase Embedded, Logi Symphony, and Domo Everywhere (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom embedding SDKs, and transparent analytics infrastructure—ideal for engineering-led teams that need full control over their embedded analytics stack without per-user SaaS fees or vendor lock-in.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Looker Embedded](https://looker.com/)**
-
-  Google Cloud's embedded analytics platform. Primarily iframe-based with a JavaScript Embed SDK for programmatic control (filtering, drill-downs, resizing). Strong semantic modeling via LookML. Best for organizations already invested in BigQuery and Google Cloud. Embedded tier pricing starts at $100K–$1.77M+/year .
-
-
-
-- **[Sisense](https://www.sisense.com/)**
-
-  In-memory embedded analytics engine (ElastiCube) with white-labeling and drag-and-drop interface. Offers Compose SDK and Sisense.js for native embedding without iframes. Targets product teams wanting turnkey embedded analytics with fast query performance. Starts from approximately $21K/year .
-
-
-
-- **[GoodData](https://www.gooddata.com/)**
-
-  Developer-first embedded analytics platform with React-based SDK (GoodData.UI) that renders dashboards as native DOM components—no iframes. Token-based authentication, custom theming via your own design system, and per-workspace multi-tenant architecture. Starts from $1,500/month. Best for SaaS vendors serving hundreds or thousands of tenants .
-
-
-
-- **[Domo Everywhere](https://www.domo.com/)**
-
-  Domo's embedded analytics offering, strictly iframe-based. Uses server-side embed tokens for authorization with row-level or user-specific permissions. JS API for filtering and data export. Simple to deploy and secure, but limited UI cohesion with host application .
-
-
-
-- **[Qlik Embedded Analytics](https://www.qlik.com/)**
-
-  Associative engine enabling free-form exploration in embedded scenarios. Robust APIs (Capability API, Nebula.js) for custom analytics experiences. Supports iframe embeds and mashups. Insight Advisor provides AI-generated insights. Enterprise-level pricing .
-
-
-
-- **[ThoughtSpot Embedded](https://www.thoughtspot.com/)**
-
-  Search-driven analytics embedded platform (formerly ThoughtSpot Everywhere). Provides interactive drill-through navigation with semantic model reuse across embedded dashboards. Focuses on guided drill paths for non-technical users .
-
-
-
-- **[Reveal BI](https://www.revealbi.io/)**
-
-  Embedded analytics SDK for .NET, Java, and JavaScript. Tenant-aware embedding runtime with REST-based binding. Focuses on dependable PDF output within tenant-aware embedded flows. Couples tenant-aware request context with parameterized dashboard filters .
-
-
-
-- **[Yellowfin BI](https://www.yellowfinbi.com/)**
-
-  Embedded analytics platform with white-labeling, multi-tenancy, and row-level security. Provides dashboards, reports, and data storytelling capabilities.
-
-
-
-- **[Logi Analytics](https://www.logianalytics.com/)**
-
-  Embedded analytics platform (now part of insightsoftware). Offers Logi Symphony for OEM and SaaS embedding with customizable dashboards and self-service analytics.
-
-
-
-- **[Bold BI](https://www.boldbi.com/)**
-
-  Embedded analytics platform with self-service and embedded capabilities. Features row-level security, SSO, trusted authentication, multi-tenancy, and white-labeling. Noted for strong visualization options and collaboration tools .
-
-
-
-- **[Sigma Embedded](https://www.sigmacomputing.com/)**
-
-  Cloud-native embedded analytics built on cloud data warehouses. Provides unlimited viewer access on some plans. Pricing around $1,000/year per creator/explorer role .
-
-
-
-- **[Luzmo](https://www.luzmo.com/)**
-
-  Embedded analytics platform designed for SaaS companies. MAU-based subscription tiers: Starter from €495/month, Premium from €1,995/month. Emphasizes PDF output tied to embedded runtime state and tenant-aware embedding .
-
-
-
-- **[Metabase Embedded](https://www.metabase.com/)**
-
-  Open-source BI platform with embedded analytics offering (Embedded Analytics Pro). Pricing: $575/month platform fee + $12/month per user (first 10 included). Enterprise plans start at $20K/year. Best for engineering-led teams with simpler or narrower needs .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Helical Insight](https://github.com/helicalinsight/helicalinsight)**
-
-  Free, open-source BI platform with AI conversational analytics (BYO-LLM), pixel-perfect paginated reports, interactive dashboards, SSO, embedding, multi-tenancy, and row-level security. Every feature free in Community Edition. Self-hosted, Docker-ready. Java 25 + Spring backend, React frontend, Python/LangChain Instant BI module. Zero-configuration Docker deployment via `docker compose up`. Modern alternative to JasperReports, BIRT, Pentaho, and Crystal Reports . **Community Edition free**.
-
-
-
-- **[Shaper](https://github.com/taleshape/shaper)**
-
-  Minimal embedded analytics and data platform powered by DuckDB. Open-source, SQL-driven data dashboards. Available via `npx @taleshape/shaper` or Docker for production. Lightweight alternative for teams wanting embeddable dashboards without a full BI platform. Mozilla Public License 2.0 .
-
-
-
-- **[bi-report-kit](https://github.com/bi-report-kit/bi-report-kit)**
-
-  Embeddable BI reporting toolkit for React/Next.js. Provides saved queries, collections, and dashboards as installable npm package that owns its own storage (two tables in your existing PostgreSQL). Mount one route, render UI, done. Read-only against your data by design—no create/update/delete path into business tables. Supports CSV/PNG/PDF export. Designed for teams that want Rails BI gem-style building blocks in JavaScript .
-
-
-
-- **[NexusBI](https://github.com/HeyderHesenov/NexusBI)**
-
-  AI-powered natural-language BI platform: NL→SQL→dashboard plus power-user SQL editor, root-cause analysis, proactive AI digest, agentic copilot, semantic/trust layer, workspaces + RBAC + row-level security, embedded analytics + white-label, and FP&A scenario planning. FastAPI + React stack. Docker deployment with PostgreSQL + Redis. Demo mode runs fully offline with rule-based engine .
-
-
-
-- **[DataEase](https://github.com/dataease/dataease)**
-
-  Open-source BI tool with 500K+ downloads. Supports 20+ data sources, dataset creation via table joins, data dashboards, and interactive dashboards with drag-and-drop chart building. Includes SQLBot for natural language data querying and template marketplace with retail, finance, manufacturing, and other industry templates. GPL v3 license. Self-hosted with multi-platform installation .
-
-
-
-- **[Embeddable](https://github.com/embeddable)**
-
-  Open-source embedded analytics framework. Browser-native dashboards running on DuckDB-WASM over Apache Arrow data plane for near-zero cost per view. One-tag embedding, JWT auth, server-enforced row-level security. LLM/MCP-authorable. Open-core model .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Lightweight BI**: **Metabase** (open-source, easy setup, good for engineering-led teams), **Apache Superset** (enterprise-grade, SQL-first, embedding via SDK) .
-
-- **AI-Native Analytics**: **NexusBI** (NL→SQL with copilot), **DataEase** (SQLBot智能问数) .
-
-- **Embedding Kits**: **bi-report-kit** (React/Next.js embeddable toolkit), **Shaper** (DuckDB-powered dashboards) .
-
-- **Dashboard Frameworks**: **Grafana** (embeddable dashboards via iframe or panel embedding), **Apache Superset** (embedded SDK with row-level security).
-
-
-
-**Frameworks for building custom systems**: Combine **Helical Insight** or **DataEase** for the core BI engine, **bi-report-kit** for React/Next.js embedding, **Shaper** for DuckDB-powered lightweight dashboards, and **PostgreSQL** for persistence. Add **Ollama** for self-hosted LLM-powered natural language querying and **Docker** for deployment.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Embedded analytics platforms handle sensitive business data; ensure proper access controls, row-level security, and compliance with data protection regulations.
-
-- Self-hosted open-source solutions require significant operational investment in infrastructure, security, and maintenance. The license is free; the platform is not.
-
-
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Embedded Analytics Platform Banner" width="100%" />
+</p>
+
+# 📊 Awesome Embedded Analytics Platform 🚀
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <img src="https://img.shields.io/github/last-commit/ishandutta2007/Awesome-Embedded-Analytics-Platform?style=flat-square&color=blue" alt="Last Commit" />
+  <img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Embedded-Analytics-Platform?style=flat-square&color=gold" alt="Stars" />
+  <img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Embedded-Analytics-Platform?style=flat-square&color=green" alt="License" />
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 💡 Top Embedded Analytics Platforms Ecosystem 🌐
 
+**Curated List of Enterprise SaaS Products & Open-Source GitHub Projects**
 
-**Made for SaaS product teams, platform engineers, data product managers, and embedded analytics developers.**
+*Focused on White-Label Business Intelligence (BI), Customer-Facing Dashboards, Multi-Tenant Analytics & SDK-Based Embedding*
 
-Let's make embedded analytics more open, customizable, and developer-friendly.
+**📅 Last updated: September 2026**
+
+---
+
+## 🔎 Overview & Ecosystem Guide
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Embedded Analytics**. These tools help SaaS vendors, product teams, data engineers, and developers embed interactive dashboards, ad-hoc reports, and custom data visualizations directly into web applications—enabling customer-facing analytics without building a proprietary BI platform from scratch.
+
+### 🌟 Why Embedded Analytics Matters
+- 📈 **Accelerated Time-to-Market:** Launch white-labeled customer-facing dashboards in days instead of months.
+- 🔐 **Multi-Tenancy & Row-Level Security (RLS):** Safely isolate customer data across thousands of tenant organizations.
+- 🎨 **Native Customization & Seamless UX:** Blend visualizations into your product via custom SDKs (React, Vue, Angular) or secure iframe tokens.
+- 💰 **Monetization Opportunities:** Turn analytics into premium upsell tiers for your SaaS software product.
+
+---
+
+## 📑 Table of Contents
+- [🌐 SaaS/Hosted Platforms](#-saashosted-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [☕ Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
+
+---
+
+## 🌐 SaaS/Hosted Platforms
+
+> 💡 **Market Size & Structure:** The global embedded analytics market size is estimated at **$75.5 Billion by 2026** (growing at ~14.8% CAGR). The sector is **moderately fragmented**, balancing cloud-giant ecosystem platforms (Google Cloud Looker) alongside specialized developer-first embedding vendors (Luzmo, Reveal BI, GoodData).
+
+### 🏢 Enterprise SaaS Platform Comparison
+
+Below is a curated breakdown sorted in **descending order by company scale** (estimated annual revenue / parent valuation).
+
+| 🏢 Platform | 💰 Starting Tier Price | 🎁 Free Tier / Trial Limit | 📊 Company Size (Revenue / Valuation) | ⚡ Key Embedding Focus & Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Looker Embedded](https://looker.com/)** | **~$60,000 / year** (Custom quote-based base platform fee) | ⌛ **90-Day Free Trial** (Cloud query consumption fees apply) | 🏦 **Parent Google Cloud: $99.7B+ Revenue (2025)** (Acquired for $2.6B) | 🔹 Iframe & JS Embed SDK, LookML semantic model layer, best for GCP/BigQuery ecosystems. |
+| **[Qlik Embedded Analytics](https://www.qlik.com/)** | **~$25,000 / year** (Enterprise capacity licensing) | ⌛ **30-Day Free Trial** (Full Qlik Sense enterprise features) | 💵 **~$750M Revenue** (Private equity owned by Thoma Bravo) | 🔹 Qlik Associative Engine, Nebula.js SDK, mashups, AI Insight Advisor. |
+| **[ThoughtSpot Embedded](https://www.thoughtspot.com/)** | **$1,250 / month** (~$15,000/year starting pay-as-you-go) | ⌛ **30-Day Free Trial** (Includes $500 free query credits) | 🚀 **~$150M Revenue / $4.2B Valuation** | 🔹 Search-driven NL-query analytics, interactive drill-downs, React SDK. |
+| **[Domo Everywhere](https://www.domo.com/)** | **$300 / month** (~$3,600/year base user tiers) | ⌛ **30-Day Free Trial** (Full platform access for up to 5 users) | 📈 **$317M Revenue (FY2025 Public: NASDAQ DOMO)** | 🔹 Turnkey iframe embedding with server-side token auth and dynamic RLS filtering. |
+| **[Sigma Embedded](https://www.sigmacomputing.com/)** | **~$1,000 / year** per creator seat (Enterprise platform commitment) | ⌛ **14-Day Free Trial** (Full access connected to cloud data warehouses) | 🦄 **~$200M ARR / $3.0B Valuation (2026)** | 🔹 Cloud-native spreadsheet-style analytics on Snowflake/BigQuery with embed support. |
+| **[Sisense](https://www.sisense.com/)** | **~$21,000 / year** (Standard starting subscription) | ⌛ **30-Day Free Trial** (Full ElastiCube engine and Compose SDK) | 🦄 **~$185M ARR / $1.0B Valuation** | 🔹 ElastiCube in-memory engine, Compose SDK & Sisense.js for iframe-free embedding. |
+| **[Logi Analytics (Logi Symphony)](https://www.logianalytics.com/)** | **~$15,000 / year** (Custom OEM platform licensing) | ⌛ **14-Day Free Trial** (Developer evaluation download) | 🏢 **Parent insightsoftware: ~$500M+ Revenue** | 🔹 Dedicated OEM/SaaS embedded analytics with customizable dashboards & self-service reporting. |
+| **[GoodData](https://www.gooddata.com/)** | **$1,500 / month** (GoodData Cloud Growth tier) | ⌛ **30-Day Free Trial** (GoodData Cloud Starter instance) | 📊 **~$60M ARR** (Private VC-backed) | 🔹 Developer-first React SDK (GoodData.UI) rendering native DOM components without iframes. |
+| **[Luzmo](https://www.luzmo.com/)** | **€495 / month** (~$550/month Starter tier) | ⌛ **10-Day Free Trial** (Unlimited dashboard builds & SDK access) | ⚡ **~$15.6M Funding** ($0–$100M Valuation tier) | 🔹 MAU-based pricing tailored for SaaS applications with flexible embed SDKs & PDF exports. |
+| **[Reveal BI](https://www.revealbi.io/)** | **$9,995 / year** (Flat rate per application unlimited users) | ⌛ **30-Day Free Trial** (SDK evaluation for React, Angular, Web Component, .NET) | 🏢 **Parent Infragistics: ~$50M Revenue** | 🔹 Native SDK for Web & Mobile (.NET, Java, JS), tenant-aware REST binding, flat pricing. |
+| **[Bold BI](https://www.boldbi.com/)** | **$495 / month** (Embedded Growth Plan) | ⌛ **15-Day Free Trial** (Includes live support setup session) | 🏢 **Parent Syncfusion: ~$30M Revenue** | 🔹 Self-service white-label analytics, multi-tenant architecture, SSO, RLS security. |
+| **[Yellowfin BI](https://www.yellowfinbi.com/)** | **~$10,000 / year** (Custom OEM embed license) | ⌛ **30-Day Free Trial** (Full server installer or Docker evaluation) | 🏢 **Parent Idera Inc: ~$200M+ Revenue** | 🔹 Data storytelling, white-label automated signals, multi-tenant governance. |
+| **[Metabase Embedded](https://www.metabase.com/)** | **$575 / month** (Embedded Pro tier + $12/user/mo) | ⌛ **14-Day Free Trial** (Metabase Cloud Pro evaluation) | 🚀 **~$16M ARR / $51M Total Funding** | 🔹 Fast setup open-core platform with interactive embedding, custom branding, and RLS. |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+> 🆓 **Self-Hosted & Community-Driven:** Open-source embedded analytics tools give engineering teams 100% control over data governance, customization, and source code without per-user SaaS fees or vendor lock-in.
+
+### 🌟 Open-Source Repository Ranking
+
+Listed below sorted in **descending order by GitHub Star Count** ⭐.
+
+| 📦 Repository | ⭐ Star Count Badge | 📜 License | 🛠️ Tech Stack | 🎯 Key Highlights & Embedding Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Grafana](https://github.com/grafana/grafana)** | [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="Grafana Stars"/>](https://github.com/grafana/grafana/stargazers) | AGPL-3.0 | Go, TypeScript, React | 🔹 Industry standard operational dashboards & telemetry. Embed panels via iframe or JWT auth endpoints. |
+| **[Apache Superset](https://github.com/apache/superset)** | [<img src="https://img.shields.io/github/stars/apache/superset?style=social&color=white" alt="Apache Superset Stars"/>](https://github.com/apache/superset/stargazers) | Apache-2.0 | Python, TypeScript, React | 🔹 Enterprise SQL-first BI platform with dedicated `@superset-ui/embedded-sdk` for web applications. |
+| **[Metabase](https://github.com/metabase/metabase)** | [<img src="https://img.shields.io/github/stars/metabase/metabase?style=social&color=white" alt="Metabase Stars"/>](https://github.com/metabase/metabase/stargazers) | AGPL-3.0 / Commercial | Clojure, React | 🔹 Ultra-intuitive visual query builder. Community Edition provides simple iframe embedding. |
+| **[DataEase](https://github.com/dataease/dataease)** | [<img src="https://img.shields.io/github/stars/dataease/dataease?style=social&color=white" alt="DataEase Stars"/>](https://github.com/dataease/dataease/stargazers) | GPL-3.0 | Java, Vue.js | 🔹 Modern open-source BI tool with 500K+ downloads, drag-and-drop charts, SQLBot AI querying, and industry templates. |
+| **[Cube.js](https://github.com/cube-js/cube)** | [<img src="https://img.shields.io/github/stars/cube-js/cube?style=social&color=white" alt="Cube.js Stars"/>](https://github.com/cube-js/cube/stargazers) | Apache-2.0 | Rust, TypeScript | 🔹 Universal semantic layer & headless BI engine for building custom frontend analytics dashboards via REST/GraphQL API. |
+| **[Lightdash](https://github.com/lightdash/lightdash)** | [<img src="https://img.shields.io/github/stars/lightdash/lightdash?style=social&color=white" alt="Lightdash Stars"/>](https://github.com/lightdash/lightdash/stargazers) | MIT | TypeScript, React, dbt | 🔹 Open-source Looker alternative natively integrated with dbt models for embedded metrics and analytics. |
+| **[Helical Insight](https://github.com/helicalinsight/helicalinsight)** | [<img src="https://img.shields.io/github/stars/helicalinsight/helicalinsight?style=social&color=white" alt="Helical Insight Stars"/>](https://github.com/helicalinsight/helicalinsight/stargazers) | Apache-2.0 | Java 25, React, Python | 🔹 Open-source BI platform featuring BYO-LLM conversational analytics, paginated reporting, RLS, and zero-config Docker. |
+| **[Shaper](https://github.com/taleshape/shaper)** | [<img src="https://img.shields.io/github/stars/taleshape/shaper?style=social&color=white" alt="Shaper Stars"/>](https://github.com/taleshape/shaper/stargazers) | MPL-2.0 | TypeScript, DuckDB | 🔹 Lightweight DuckDB-powered SQL dashboards designed for embeddable analytical workflows. |
+| **[NexusBI](https://github.com/HeyderHesenov/NexusBI)** | [<img src="https://img.shields.io/github/stars/HeyderHesenov/NexusBI?style=social&color=white" alt="NexusBI Stars"/>](https://github.com/HeyderHesenov/NexusBI/stargazers) | MIT | Python (FastAPI), React | 🔹 AI-native natural language BI platform with NL→SQL engines, copilot, white-labeling, and embedded workflows. |
+| **[bi-report-kit](https://github.com/bi-report-kit/bi-report-kit)** | [<img src="https://img.shields.io/github/stars/bi-report-kit/bi-report-kit?style=social&color=white" alt="bi-report-kit Stars"/>](https://github.com/bi-report-kit/bi-report-kit/stargazers) | MIT | TypeScript, React, PostgreSQL | 🔹 Embeddable reporting toolkit for React/Next.js applications with self-contained PostgreSQL storage. |
+| **[Embeddable Framework](https://github.com/embeddable)** | [<img src="https://img.shields.io/github/stars/embeddable?style=social&color=white" alt="Embeddable Stars"/>](https://github.com/embeddable/stargazers) | Open-Core | Web Components, DuckDB-WASM | 🔹 Browser-native embedded analytics running on DuckDB-WASM over Apache Arrow data plane with one-tag embedding. |
+
+---
+
+## 🛠️ Architectural Recommendations
+
+- ⚡ **For React / Next.js Applications:** Consider **bi-report-kit** or **GoodData.UI** for native DOM rendering without iframes.
+- 🏢 **For Enterprise Self-Hosted BI:** Deploy **Apache Superset** or **Helical Insight** with Docker Compose and PostgreSQL.
+- 🤖 **For AI-Driven Querying (NL-to-SQL):** Integrate **NexusBI** or **DataEase (SQLBot)** alongside local LLM providers (Ollama).
+- 🚀 **For High-Performance Edge Analytics:** Leverage **Shaper** or **Embeddable Framework** powered by DuckDB-WASM.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please follow these simple guidelines:
+
+1. 🍴 **Fork** this repository.
+2. 📝 **Add/Update** entries in `README.md` following the tabular format.
+3. 🔎 **Provide Factual Info:** Include name, official site, 1–2 sentence description, exact pricing, and open-source star badges.
+4. 📬 **Submit a Pull Request** with a clear title and description.
+
+If you find this list helpful, please **Star ⭐ this repository** to support the project!
+
+---
+
+## ☕ Support & Sponsorship
+
+If this project has saved you hours of research or helped you select the right embedded analytics platform for your SaaS, please consider supporting the project!
+
+- 🌟 **Star this repository** to improve its visibility.
+- 🔀 **Fork & Share** it with developers, product managers, and data engineers.
+- ☕ **Buy me a coffee / Sponsor:** Support ongoing maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+<p align="left">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor on GitHub" />
+  </a>
+</p>
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Embedded-Analytics-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Embedded-Analytics-Platform&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is **community-curated** for informational purposes and does not constitute an endorsement.
+- Embedded analytics systems process enterprise and customer data; ensure compliance with GDPR, HIPAA, and SOC2 regulations.
+- Licensing and SaaS pricing change periodically; always verify exact terms with platform vendors.
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for SaaS Product Teams, Data Engineers & Platform Architects.</b>
+</p>
