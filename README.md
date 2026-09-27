@@ -78,9 +78,9 @@ Below is a curated breakdown sorted in **descending order by company scale** (es
 
 ### 🌟 Open-Source Repository Ranking
 
-Listed below sorted in **descending order by GitHub Star Count** ⭐.
+Listed below sorted in **descending order by GitHub Stars_Count** ⭐.
 
-| 📦 Repository | ⭐ Star Count Badge | 📜 License | 🛠️ Tech Stack | 🎯 Key Highlights & Embedding Features |
+| 📦 Repository | ⭐ Stars_Count Badge | 📜 License | 🛠️ Tech Stack | 🎯 Key Highlights & Embedding Features |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Grafana](https://github.com/grafana/grafana)** | [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="Grafana Stars"/>](https://github.com/grafana/grafana/stargazers) | AGPL-3.0 | Go, TypeScript, React | 🔹 Industry standard operational dashboards & telemetry. Embed panels via iframe or JWT auth endpoints. |
 | **[Apache Superset](https://github.com/apache/superset)** | [<img src="https://img.shields.io/github/stars/apache/superset?style=social&color=white" alt="Apache Superset Stars"/>](https://github.com/apache/superset/stargazers) | Apache-2.0 | Python, TypeScript, React | 🔹 Enterprise SQL-first BI platform with dedicated `@superset-ui/embedded-sdk` for web applications. |
@@ -111,7 +111,7 @@ Contributions are welcome! Please follow these simple guidelines:
 
 1. 🍴 **Fork** this repository.
 2. 📝 **Add/Update** entries in `README.md` following the tabular format.
-3. 🔎 **Provide Factual Info:** Include name, official site, 1–2 sentence description, exact pricing, and open-source star badges.
+3. 🔎 **Provide Factual Info:** Include name, official site, 1–2 sentence description, exact pricing, and open-source Stars_Badges.
 4. 📬 **Submit a Pull Request** with a clear title and description.
 
 If you find this list helpful, please **Star ⭐ this repository** to support the project!
