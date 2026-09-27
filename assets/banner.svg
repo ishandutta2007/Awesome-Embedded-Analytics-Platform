@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <!-- Chart Line Gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Chart Area Gradient -->
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #38bdf8;
+      letter-spacing: 0.2px;
+    }
+    .tagline {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      fill: #94a3b8;
+    }
+
+    /* Keyframe Animations */
+    @keyframes pulsePulse {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.05); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px); opacity: 0.3; }
+      50% { transform: translateY(-15px); opacity: 0.8; }
+      100% { transform: translateY(0px); opacity: 0.3; }
+    }
+    @keyframes wavePath {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes barGrow {
+      0% { transform: scaleY(0.2); }
+      50% { transform: scaleY(1); }
+      100% { transform: scaleY(0.2); }
+    }
+    @keyframes ringRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .animated-ring {
+      transform-origin: 1020px 180px;
+      animation: ringRotate 25s linear infinite;
+    }
+    .p1 { animation: floatParticle 4s ease-in-out infinite; }
+    .p2 { animation: floatParticle 6s ease-in-out infinite 1s; }
+    .p3 { animation: floatParticle 5s ease-in-out infinite 2s; }
+    
+    .bar-1 { transform-origin: bottom; animation: barGrow 3.5s ease-in-out infinite; }
+    .bar-2 { transform-origin: bottom; animation: barGrow 4.2s ease-in-out infinite 0.5s; }
+    .bar-3 { transform-origin: bottom; animation: barGrow 3.8s ease-in-out infinite 1s; }
+    .bar-4 { transform-origin: bottom; animation: barGrow 4.6s ease-in-out infinite 1.5s; }
+  </style>
+
+  <!-- Base Rectangle -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Decorative Grid -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="1200" height="360" fill="url(#grid)" />
+  </g>
+
+  <!-- Glowing Animated Background Orbs (Behind content) -->
+  <circle cx="150" cy="80" r="140" fill="#0284c7" opacity="0.25" filter="url(#glow)" />
+  <circle cx="1050" cy="260" r="160" fill="#6366f1" opacity="0.2" filter="url(#glow)" />
+
+  <!-- Dynamic Dynamic Ring Graphic (Far Right Background Accent) -->
+  <g class="animated-ring" opacity="0.25">
+    <circle cx="1020" cy="180" r="110" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 12" />
+    <circle cx="1020" cy="180" r="130" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="15 15" />
+  </g>
+
+  <!-- Dynamic Dashboard Graphics Box (Right Half, Behind Text Contrast Zone) -->
+  <g transform="translate(680, 55)">
+    <!-- Glassmorphic Card 1: Main Chart Panel -->
+    <rect x="0" y="0" width="460" height="250" rx="14" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5" />
+
+    <!-- Card Header dots -->
+    <circle cx="24" cy="22" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="40" cy="22" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="56" cy="22" r="5" fill="#10b981" opacity="0.8" />
+    <line x1="80" y1="22" x2="200" y2="22" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Animated Area & Wave Line Chart -->
+    <g transform="translate(30, 60)">
+      <!-- Area Fill -->
+      <path d="M0,120 Q60,40 120,80 T240,30 T360,70 L360,150 L0,150 Z" fill="url(#areaGrad)" />
+      <!-- Glowing Line -->
+      <path d="M0,120 Q60,40 120,80 T240,30 T360,70" fill="none" stroke="url(#lineGrad)" stroke-width="4" filter="url(#subtleGlow)" />
+      
+      <!-- Chart Data Dots -->
+      <circle cx="0" cy="120" r="4" fill="#38bdf8" />
+      <circle cx="90" cy="60" r="4" fill="#38bdf8" />
+      <circle cx="180" cy="70" r="4" fill="#818cf8" />
+      <circle cx="270" cy="30" r="5" fill="#c084fc" filter="url(#subtleGlow)" />
+      <circle cx="360" cy="70" r="4" fill="#c084fc" />
+    </g>
+
+    <!-- Animated Bar Chart Overlay Card -->
+    <g transform="translate(260, 130)">
+      <rect x="0" y="0" width="170" height="100" rx="10" fill="#0f172a" fill-opacity="0.75" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+      <!-- Animated Bars -->
+      <rect class="bar-1" x="25" y="30" width="16" height="50" rx="3" fill="#38bdf8" />
+      <rect class="bar-2" x="55" y="20" width="16" height="60" rx="3" fill="#818cf8" />
+      <rect class="bar-3" x="85" y="40" width="16" height="40" rx="3" fill="#c084fc" />
+      <rect class="bar-4" x="115" y="15" width="16" height="65" rx="3" fill="#f472b6" />
+    </g>
+
+    <!-- Small Floating Metric Badge -->
+    <g transform="translate(20, 160)" class="p2">
+      <rect x="0" y="0" width="140" height="55" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="14" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" font-weight="600">QUERY LATENCY</text>
+      <text x="14" y="44" font-family="system-ui, sans-serif" font-size="16" fill="#10b981" font-weight="700">12ms⚡</text>
+    </g>
+  </g>
+
+  <!-- Floating Particles for Dynamic Ambient Feel -->
+  <circle class="p1" cx="200" cy="300" r="3" fill="#38bdf8" />
+  <circle class="p3" cx="550" cy="70" r="4" fill="#818cf8" />
+  <circle class="p2" cx="620" cy="310" r="3.5" fill="#c084fc" />
+
+  <!-- Foreground Content Block (Guaranteed High Contrast & Readability) -->
+  <g transform="translate(60, 0)">
+    <!-- Pill Category Badge -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="245" height="32" rx="16" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38bdf8" letter-spacing="1">
+        ⚡ AWESOME EMBEDDED ANALYTICS
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="150" class="title">
+      Embedded Analytics Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="195" class="subtitle">
+      Enterprise SaaS &amp; Open-Source BI Ecosystem
+    </text>
+
+    <!-- Description / Tagline -->
+    <text x="0" y="235" class="tagline">
+      Curated White-Label BI, Multi-Tenant Dashboards &amp; Developer-First Analytics SDKs
+    </text>
+
+    <!-- Stat Badges Row -->
+    <g transform="translate(0, 268)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="130" height="36" rx="8" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="14" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">📊 25+ Platforms</text>
+
+      <!-- Badge 2 -->
+      <rect x="142" y="0" width="145" height="36" rx="8" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="156" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">⭐ Open-Source BI</text>
+
+      <!-- Badge 3 -->
+      <rect x="299" y="0" width="150" height="36" rx="8" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="313" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">🚀 Active 2026</text>
+    </g>
+  </g>
+</svg>
